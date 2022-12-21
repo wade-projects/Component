@@ -24,6 +24,7 @@ import com.xiaojinzi.component.impl.interceptor.InterceptorCenter
 import com.xiaojinzi.component.impl.interceptor.OpenOnceInterceptor
 import com.xiaojinzi.component.support.*
 import com.xiaojinzi.component.support.NavigationDisposable.ProxyNavigationDisposableImpl
+import java.security.SecureRandom
 import java.util.*
 
 interface INavigator<T : INavigator<T>> : IRouterRequestBuilder<T>, Call {
@@ -1107,7 +1108,7 @@ open class NavigatorImpl<T : INavigator<T>>
          * 和[RouterFragment] 配套使用
          */
         private val mRequestCodeSet: MutableSet<String> = HashSet()
-        private val r = Random()
+        private val r = SecureRandom()
 
         /**
          * 如果 requestCode 是 [Navigator.RANDOM_REQUEST_CODE].
