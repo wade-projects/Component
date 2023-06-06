@@ -7,7 +7,7 @@ buildscript {
     apply from: "dependencies.gradle"
 
     ext.component_group_id = "com.xiaojinzi"
-    ext.isDependMavenOnline = true
+    ext.isDependMavenOnline = false
     // ext.component_asm_util_class_output_path = "./Temp/ASMUtil.class"
     ext.component_asm_disable = false
     // 注解生成器生成的文件 json 信息都
